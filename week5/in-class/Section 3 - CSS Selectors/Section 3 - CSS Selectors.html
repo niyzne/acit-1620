@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Demo</title>
+
+  <!--
+  =====================================================================
+  SECTION 3: CSS SELECTORS — EXAMPLE PAGE
+
+  Each <section> on the page demonstrates ONE selector.
+  The HTML is already written. Open styles.css and type the CSS rule
+  under each numbered comment, then save and refresh the browser to
+  see which part of the page it changes.
+  The image for this page is in the images folder:
+    images/photo.jpg
+  =====================================================================
+  -->
+
+  <!-- <link> connects this page to the CSS file.
+       rel="stylesheet" says the file is a stylesheet.
+       href is the path to the file (here, in the same folder). -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>CSS Selectors Demo</h1>
+
+  <section>
+    <h2>1. Universal selector: *</h2>
+    <p>Every element on this page uses the Arial font.</p>
+  </section>
+
+  <section>
+    <h2>2. Type selector: h2</h2>
+    <p>Every &lt;h2&gt; heading on this page is navy.</p>
+  </section>
+
+  <section>
+    <h2>3. Class selector: .note</h2>
+    <p class="note">This paragraph has class="note".</p>
+    <p>This paragraph has no class.</p>
+    <p class="note">This one has class="note" too.</p>
+  </section>
+
+  <section>
+    <h2>4. ID selector: #special</h2>
+    <p id="special">This paragraph has id="special".</p>
+    <p>This paragraph has no id.</p>
+  </section>
+
+  <section>
+    <h2>5. Grouping selector: h1, footer</h2>
+    <p>The page title at the top and the footer at the bottom are both centred.</p>
+  </section>
+
+  <section>
+    <h2>6. Descendant selector: article p</h2>
+    <article>
+      <p>This paragraph is inside the article.</p>
+      <section>
+        <p>This paragraph is nested deeper, but still inside the article.</p>
+      </section>
+    </article>
+    <p>This paragraph is outside the article.</p>
+  </section>
+
+  <section>
+    <h2>7. Child selector: div &gt; p</h2>
+    <div>
+      <p>This paragraph is a direct child of the div.</p>
+      <section>
+        <p>This paragraph is nested inside a section, so it is not a direct child.</p>
+      </section>
+    </div>
+  </section>
+
+  <section>
+    <h2>8. Adjacent sibling selector: h3 + p</h2>
+    <h3>A small heading</h3>
+    <p>This paragraph comes right after the h3.</p>
+    <p>This paragraph comes second, so it is not selected.</p>
+  </section>
+
+  <section>
+    <h2>9. General sibling selector: h4 ~ p</h2>
+    <p>This paragraph comes before the h4, so it is not selected.</p>
+    <h4>Another small heading</h4>
+    <p>First paragraph after the h4.</p>
+    <p>Second paragraph after the h4.</p>
+  </section>
+
+  <section>
+    <h2>10. Attribute selector: a[target="_blank"]</h2>
+    <p><a href="https://example.com" target="_blank">This link opens in a new tab</a></p>
+    <p><a href="about.html">This link opens in the same tab</a></p>
+  </section>
+
+  <section>
+    <h2>11. Pseudo-classes: :hover and :first-child</h2>
+    <button>Hover over me</button>
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>12. Pseudo-elements: ::before and ::after</h2>
+    <p class="quote">Learning never exhausts the mind.</p>
+  </section>
+
+  <section>
+    <h2>13. :is(h5, h6)</h2>
+    <h5>This h5 is teal</h5>
+    <h6>This h6 is teal too</h6>
+  </section>
+
+  <section>
+    <h2>14. :where() vs :is()</h2>
+    <p><em class="where-demo">This text uses :where() — the em rule still wins.</em></p>
+    <p><em class="is-demo">This text uses :is() — the :is() rule wins.</em></p>
+  </section>
+
+  <section>
+    <h2>15. :has(img)</h2>
+    <div>
+      <img src="images/photo.jpg" alt="Snowy mountains above a lake">
+      This div contains an image, so it gets a green border.
+    </div>
+    <div>
+      This div has no image, so it has no border.
+    </div>
+  </section>
+
+  <section>
+    <h2>16. Specificity</h2>
+    <p id="spec-demo" class="spec-demo">
+      This paragraph has both an id and a class. It is red, because an ID
+      selector beats a class selector.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 CSS Selectors Demo</p>
+  </footer>
+
+</body>
+</html>

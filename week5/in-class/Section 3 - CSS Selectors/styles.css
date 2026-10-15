@@ -1,0 +1,67 @@
+/* =====================================================================
+   SECTION 3: CSS SELECTORS — styles.css
+   Linked from the HTML page with:
+     <link rel="stylesheet" href="styles.css">
+   A .css file contains only CSS: no <style> tags.
+   Type each rule under its numbered comment.
+   ===================================================================== */
+
+/* 1. Universal selector: every element */
+
+/* 2. Type selector: every <h2> */
+
+
+/* 3. Class selector: every element with class="note" */
+.note {
+  background-color: lightyellow;
+}
+
+/* 4. ID selector: the one element with id="special" */
+#special {
+  color: red;
+  font-weight: bold;
+}
+
+/* 5. Grouping selector: the same rule for <h1> and <footer> */
+h1, footer {
+  text-align: center;
+}
+
+/* 6. Descendant selector: any <p> inside an <article>, at any depth */
+article p {
+  color: purple;
+}
+
+/* 7. Child selector: only a <p> that is a DIRECT child of a <div> */
+
+
+/* 8. Adjacent sibling selector: only the first <p> right after an <h3> */
+
+
+/* 9. General sibling selector: every <p> after an <h4> (same parent) */
+
+
+/* 10. Attribute selector: links that open in a new tab */
+
+
+/* 11. Pseudo-classes: an element in a state or position */
+
+
+/* 12. Pseudo-elements: add content before and after an element */
+
+
+/* 13. :is() — a shorter way to write "h5, h6" */
+
+
+/* 14. :where() vs :is() — specificity
+       The em rule comes FIRST. The two rules after it both target
+       an <em> by its class, but only :is() is strong enough to win. */
+
+
+/* 15. :has() — a <div> that contains an <img> */
+
+
+/* 16. Specificity — the ID rule wins even though the class rule
+       comes later */
+
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Priya's Portfolio</title>
+
+  <!--
+  =====================================================================
+  SECTION 2: NAVIGATION, ID AND CLASS — EXAMPLE PAGE
+
+  A one-page portfolio. It shows:
+    - id on each section, and links that jump to it with href="#id"
+    - class shared by several elements
+    - a fixed header, with room left so it doesn't cover the sections
+    - smooth scrolling
+
+  Type the code under each comment. This page has no images.
+  =====================================================================
+  -->
+
+  <style>
+    /* Links glide to a section instead of jumping instantly */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Arial font, and no space around the page */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+    }
+
+    /* The header stays fixed at the top of the screen,
+       stretched across the full width, dark with white text */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #333;
+        color: white;
+        padding: 10px 20px;
+      }
+
+    /* Links inside the header are white too */
+    header a {
+      color: white;
+    }
+
+    /* Space at the top so the fixed header doesn't cover the first section */
+    main {
+      padding: 140px 20px 20px;
+    }
+
+    /* After a jump, leave room for the header above each section.
+       min-height only makes each section tall enough to see the scrolling. */
+    section {
+      scroll-margin-top: 140px;
+      min-height: 400px;
+    }
+
+    /* ID selector: styles the ONE element with id="about" */
+    #about {
+      background-color: lightyellow;
+    }
+
+    /* Class selector: styles EVERY element with class="note" */
+     .note {
+        background-color: lightblue;
+        padding: 10px;
+     }
+
+  </style>
+</head>
+<body>
+
+  <!-- Page header: the site title and the menu -->
+
+  <!-- Each link points to an id on this page using #
+  (#home, #about, #projects, #contact) -->
+  <header>
+    <h1>Priya's Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+    <!-- Main content starts here -->
+      <main>
+        <!-- id="home" is the target of the "Home" link -->
+         <section id="home">
+          <h2>Welcome</h2>
+          <p>This is my portfolio. Use the menu above to jump to any section.</p>
+          <p>
+            Hi, I'm Priya, a first-year Computer Information Technology student.
+            I build simple, accessible websites with HTML and CSS, and I'm
+            learning JavaScript next.
+          </p>
+          <p class="note">New here? Start with my projects to see my latest work.</p>
+          <p><a href="#projects">See my projects</a></p>
+          </section>
+          <!-- id must be unique: only ONE element on the page can be "about" -->
+      <section id="about">
+          <h2>About Me</h2>
+          <p>I'm a student learning Web Development with HTML, CSS and JS</p>
+          <!-- Two paragraphs share the same class, so they get the same style -->
+          <p class="note">HTML stands for HyperText Markup Language</p>
+          <p class="note">CSS stands for Cascading Style Sheets</p>
+          <p>
+            Before starting my program, I worked in retail, where I learned to
+            explain things clearly and to solve problems under pressure.
+          </p>
+          <p>
+            I enjoy turning messy information into pages that are easy to read.
+            Outside class, I volunteer at my local library and help run its
+            weekly coding club for teens.
+          </p>
+
+        <h3>Skills</h3>
+        <ul>
+          <li>HTML: semantic page structure and accessible forms</li>
+          <li>CSS: selectors, colours, spacing and simple layouts</li>
+          <li>Tools: VS Code, browser DevTools and Git</li>
+          <li>Soft skills: teamwork, communication and time management</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <!-- id="projects" is the target of the "Projects" link -->
+        <h2>Projects</h2>
+        <h3>Library Website</h3>
+          <p>
+            A one-page site for a local library using semantic tags such as
+            header, nav, article and footer. It includes news stories, a
+            reading tip and an FAQ that opens and closes.
+          </p>
+
+          <h3>Recipe Card</h3>
+          <p>
+            A recipe page with an ingredient list, numbered steps and a photo
+            with a caption. I used CSS to style the headings and lists.
+          </p>
+
+          <h3>Travel Journal</h3>
+          <p>
+            A three-page travel blog with a shared menu on every page. Each trip
+            has a date, a photo and a short story.
+          </p>
+          <!-- The same class can be used again in a different section -->
+          <class="note">Tip: New projects are added every term</class>
+          <!-- A link can jump back up to any id, not just from the menu -->
+          <p><a href="#home">Back to top</a></p>  
+      </section>
+      <!-- id="contact" is the target of the "Contact" link -->
+       <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+       </section>
+    </main>
+
+    <!-- Page footer: copyright -->
+     <footer>
+      <p>&copy; 2026 Priya's Portfolio</p>
+     </footer>
+</body>
+</html>
