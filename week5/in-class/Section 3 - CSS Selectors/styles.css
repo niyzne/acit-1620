@@ -33,35 +33,76 @@ article p {
 }
 
 /* 7. Child selector: only a <p> that is a DIRECT child of a <div> */
-
+div > p {
+  color: orange;
+}
 
 /* 8. Adjacent sibling selector: only the first <p> right after an <h3> */
-
+h3 + p {
+  color: brown;
+}
 
 /* 9. General sibling selector: every <p> after an <h4> (same parent) */
-
+h4 ~ p {
+  color: grey;
+}
 
 /* 10. Attribute selector: links that open in a new tab */
-
+a[target="_blank"] {
+  color: red;
+}
 
 /* 11. Pseudo-classes: an element in a state or position */
+button:hover {
+  background-color: lightblue
+}
 
+li:first-child {
+  font-weight: bold;
+}
 
 /* 12. Pseudo-elements: add content before and after an element */
-
+.quote::before {content: '"';}
+.quote::after {content: '"';}
 
 /* 13. :is() — a shorter way to write "h5, h6" */
+:is(h5, h6) {
+  color: teal;
+}
 
+/*
+header a nav a, footer a {
+  color: white;
+}
+
+:is(header, nav, footer) a {
+  color: white;
+}
+*/
 
 /* 14. :where() vs :is() — specificity
        The em rule comes FIRST. The two rules after it both target
        an <em> by its class, but only :is() is strong enough to win. */
 
+em {
+  color: darkgreen;
+}
+
+
+em:is(.is-demo) {
+  color: crimson;
+}
+:where(.where-demo) {color: crimson;}
+/* :is(.is-demo) {color: crimson;} */
 
 /* 15. :has() — a <div> that contains an <img> */
-
+div:has(img) {
+  border: 2px solid green;
+  padding: 10px;
+}
 
 /* 16. Specificity — the ID rule wins even though the class rule
        comes later */
 
-
+#spec-demo {color: red;}
+.spec-demo {color: red;}
