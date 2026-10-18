@@ -1,0 +1,2 @@
+Put your two images in this folder.
+Use short lowercase file names with no spaces, such as garden-beds.jpg.

@@ -1,0 +1,79 @@
+/*
+=======================================================================
+ASSIGNMENT 5: COMMUNITY GARDEN WEB PAGE  (styles.css)
+
+Write one rule under each comment. You are marked on choosing the
+right selector, not on how the page looks, so keep your properties
+simple: color, background-color, border, font-style, font-weight
+or text-decoration.
+
+Every rule must change at least one element that is really on your
+page. Open index.html in your browser after each rule and check that
+something changed. If nothing changes, check the spelling of your
+class and id names first.
+
+Leave these comments in your file when you submit.
+=======================================================================
+*/
+
+/* Add a comment with your full name and student number. */
+
+
+/* 1. Universal selector: select every element on the page. */
+
+
+/* 2. Type selector: select every <h2>. */
+
+
+/* 3. Class selector: select every element with the class "note". */
+
+
+/* 4. Class selector: select the element with the class "important",
+      so it looks different from the other notes.
+      Hint: if it sets the same property as rule 3, it must come after
+      rule 3 to win. Why? */
+
+
+/* 5. Id selector: select your FAQ section by its id. */
+
+
+/* 6. Descendant selector: select every <p> inside an <article>. */
+
+
+/* 7. Child selector: select only the <ul> that is a direct child of
+      your <nav>. */
+
+
+/* 8. Adjacent sibling selector: select the paragraph that comes right
+      after each <h2>. */
+
+
+/* 9. General sibling selector: choose one element on your page, then
+      select at least two siblings that come after it in the same
+      parent. */
+
+
+/* 10. Attribute selector: select only the links that open in a new
+       tab, using the value of their target attribute. */
+
+
+/* 11. Pseudo-classes: write two rules.
+       - Links when the mouse is over them.
+       - The first item of every list. */
+
+
+/* 12. Pseudo-element: add text before or after your <blockquote>.
+       Remember this does not work without the content property. */
+
+
+/* 13. :is(): one rule that styles <h3> elements inside both an
+       <article> and an <aside>. */
+
+
+/* 14. :where(): write a rule using :where(), then write a plain type
+       or class rule that overrides it on the same element.
+       Add a comment explaining why the second rule wins. */
+
+
+/* 15. :has(): select only the <section> that contains a <figure>. */
+
