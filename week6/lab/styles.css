@@ -16,14 +16,16 @@ Leave these comments in your file when you submit.
 =======================================================================
 */
 
-/* Add a comment with your full name and student number. */
-
-
 /* 1. Universal selector: select every element on the page. */
-
+* {
+  color: darkgreen;
+}
 
 /* 2. Type selector: select every <h2>. */
+h2 {
+  color: brown;
 
+}
 
 /* 3. Class selector: select every element with the class "note". */
 
