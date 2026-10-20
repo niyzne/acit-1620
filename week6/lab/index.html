@@ -143,8 +143,13 @@ Rules:
              <strong>. -->
 
 
+
         <!-- Second <article>, built the same way as the first:
              header with <h3> and <time>, story text, footer with author. -->
+        <article>
+          <h3></h3>
+          <time></time>
+        </article>
 
 
       <!-- Close the Garden News section. -->
@@ -154,43 +159,76 @@ Rules:
 
       <!-- Open a <section> with a unique id, then add its <h2>
            and a short intro paragraph. -->
-
+      <section id="events">
+        <h2>Events and Fees</h2>
 
         <!-- An <h3> "Upcoming events" and a list of at least two
              events. Put each event date inside <time> with a datetime
              attribute in the format YYYY-MM-DD. -->
-
+        <h3></h3>
+        <time></time>
 
         <!-- An <h3> "How to rent a plot" and an ordered list of at
              least four steps. -->
-
+        <h3></h3>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
 
         <!-- An <h3> "Plot fees" and a <table> with three columns:
              plot size, dimensions and yearly fee. Use <th> cells for the
              header row and add at least three rows of data. -->
-
+        <h3></h3>
+        <table>
+          <tr>
+            <th>plot size</th>
+            <th>dimensions</th>
+            <th>yearly fee</th>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
 
         <!-- Your second image, with a relative path, alt text, width
              and height. -->
-
+        <img src="images/picture2.jpg" alt="" style="width:500px;height500px;">
 
         <!-- A paragraph with the class "note" (note 3 of 3).
              Inside it, add a link to one of your images that downloads
              the file instead of opening it. Use a relative path. -->
 
-
       <!-- Close the Events and Fees section. -->
-
+      </section>
 
       <!-- An <aside> with an <h3> title and a short gardening tip. -->
-
+      <aside>
+        <h3></h3>
+      </aside>
 
       <!-- ======================  FAQ  ====================== -->
 
       <!-- Open a <section> with a unique id, then add its <h2>. -->
-
+      <section id="faq">
+        <h2>FAQ</h2>
 
         <!-- A paragraph that says: You searched for: watering -->
+        <p></p>
 
 
         <!-- At least three questions. Build each one with
@@ -200,11 +238,11 @@ Rules:
 
 
       <!-- Close the FAQ section. -->
+      </section>
 
 
     <!-- Close <main>. -->
     </main>
-
 
     <!-- A page <footer>. Inside it, add:
            - an <address> with the garden's name and street address on
@@ -212,7 +250,6 @@ Rules:
              opens the visitor's email program
            - a copyright line using the entity for the © symbol
            - a "Back to top" link that jumps to your header's id -->
-
 
   <!-- Close the <body> element. -->
 </body>
