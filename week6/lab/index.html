@@ -79,7 +79,7 @@ Rules:
                - alt text that describes what the image shows
                - width and height attributes -->
         <figure>
-          <img src="images/picture1.jpg" alt="A sunny community garden with raised wooden beds full of vegetables and flowers" style="width:500px;height500px;">
+          <img src="images/picture1.jpg" alt="A sunny community garden with raised wooden beds full of vegetables and flowers">
           <figcaption>Our garden beds bring neighbours together through every growing season.</figcaption>
         </figure>
 
@@ -122,6 +122,7 @@ Rules:
            and a short intro paragraph. -->
       <section id="news">
         <h2>Garden News</h2>
+        <p>Read the latest updates and exciting news from our community garden!</p>
 
 
         <!-- First <article> (a news story). Inside it:
@@ -132,26 +133,41 @@ Rules:
                - use <em> on one word you would stress out loud
                - a <footer> with the author's name -->
         <article>
-          <h3>(smth)</h3>
-          <time></time>
-          <p></p>
-          <p></p>
-        </article>
+          <header>
+            <h3>Spring Planting Day Is Here!</h3>
+            <time datetime="2026-04-12">April 12, 2026</time>
+          </header>
+
+          <p>Our garden members gathered to plant fresh vegetables, colourful flowers, and delicious herbs. Everyone worked together to prepare the soil and make room for new plants.</p>
+          <p>It was a <em>wonderful</em> day filled with teamwork, laughter, and excitement for the growing season.</p>
 
         <!-- Inside the first article, before its <footer>, add a
              paragraph with the classes "note" and "important"
              (note 2 of 3). Put one warning or important instruction in
              <strong>. -->
+          <p class="note important"><strong>Important:</strong> Remember to clean and return all shared gardening tools after use.</p>
 
+          <footer>
+            <p>Written by Jamie Lee</p>
+          </footer>
+        </article>
 
 
         <!-- Second <article>, built the same way as the first:
              header with <h3> and <time>, story text, footer with author. -->
         <article>
-          <h3></h3>
-          <time></time>
-        </article>
+          <header>
+            <h3>Our First Harvest Is Here!</h3>
+            <time datetime="2026-06-20">June 20, 2026</time>
+          </header>
 
+          <p>After weeks of caring for their plots, members are finally harvesting fresh lettuce, carrots, and herbs.</p>
+          <p>Gardeners are excited to enjoy their fresh produce and share extra vegetables with their neighbours.</p>
+
+          <footer>
+            <p>Written by Jamie Lee</p>
+          </footer>
+        </article>
 
       <!-- Close the Garden News section. -->
       </section>
@@ -208,7 +224,7 @@ Rules:
 
         <!-- Your second image, with a relative path, alt text, width
              and height. -->
-        <img src="images/picture2.jpg" alt="" style="width:500px;height500px;">
+        <img src="images/picture2.jpg" alt="">
 
         <!-- A paragraph with the class "note" (note 3 of 3).
              Inside it, add a link to one of your images that downloads
@@ -236,6 +252,9 @@ Rules:
              <details>, with the question inside <summary> and the answer
              in a paragraph after it. Use the word "watering" in at least
              one answer, and wrap it in <mark> every time it appears. -->
+        <details>
+          <summary></summary>
+        </details>
 
 
       <!-- Close the FAQ section. -->
