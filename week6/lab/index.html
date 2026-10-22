@@ -67,11 +67,10 @@ Rules:
       <section id="welcome">
         <h2>Welcome</h2>
 
-
         <!-- A paragraph welcoming visitors. Include a phrase
              with an ampersand, such as "seeds & soil", written with
              its character entity. -->
-        <p>Welcome to Willow Creek Community Garden, a friendly place where neighbours come together to grow fresh food, share knowledge, and enjoy the outdoors. Whether you're planting your first seeds &amp; soil or you're an experienced gardener, there's a place for you here.</p>
+        <p>Welcome to Garden Name, a friendly place where neighbours come together to grow fresh food, share knowledge, and enjoy the outdoors. Whether you're planting your first seeds &amp; soil or you're an experienced gardener, there's a place for you here.</p>
 
         <!-- A <figure> holding your first image and a
              <figcaption>. The image needs:
@@ -79,7 +78,7 @@ Rules:
                - alt text that describes what the image shows
                - width and height attributes -->
         <figure>
-          <img src="images/picture1.jpg" alt="A sunny community garden with raised wooden beds full of vegetables and flowers">
+          <img src="images/picture1.jpg" alt="A sunny community garden with raised wooden beds full of vegetables and flowers" width="500" height="500">
           <figcaption>Our garden beds bring neighbours together through every growing season.</figcaption>
         </figure>
 
@@ -93,14 +92,15 @@ Rules:
              can grow. Inside ONE <li>, before its closing tag, add a
              second list with at least two items. -->
         <ul>
-          <li>Tomatos</li>
+          <li>Tomatoes</li>
           <li>Carrots</li>
           <li>Lettuce</li>
-          <li>Herbs</li>
-            <ul>
-              <li>Basil</li>
-              <li>Parsley</li>
-            </ul>
+          <li>Herbs
+              <ul>
+                  <li>Basil</li>
+                  <li>Parsley</li>
+              </ul>
+          </li>
         </ul>
 
         <!-- A short quote from a garden member inside a <blockquote>. -->
@@ -178,7 +178,7 @@ Rules:
            and a short intro paragraph. -->
       <section id="events">
         <h2>Events and Fees</h2>
-        <p>Join our community events and learn how to rent a garden plot at Willow Creek Community Garden.</p>
+        <p>Join our community events and learn how to rent a garden plot at Garden Name.</p>
 
         <!-- An <h3> "Upcoming events" and a list of at least two
              events. Put each event date inside <time> with a datetime
@@ -228,7 +228,8 @@ Rules:
 
         <!-- Your second image, with a relative path, alt text, width
              and height. -->
-        <img src="images/picture2.jpg" alt="Garden volunteers harvesting fresh vegetables from a raised garden bed" width="500" height="300">
+        <!-- <img src="images/picture2.jpg" alt="Garden volunteers harvesting fresh vegetables from a raised garden bed" width="500" height="500"> -->
+        <img src="images/picture2.jpg" alt="Garden volunteers harvesting fresh vegetables from a raised garden bed" height="500">
 
         <!-- A paragraph with the class "note" (note 3 of 3).
              Inside it, add a link to one of your images that downloads
@@ -251,21 +252,27 @@ Rules:
         <h2>FAQ</h2>
 
         <!-- A paragraph that says: You searched for: watering -->
-        <p></p>
-
+        <p>You searched for: watering</p>
 
         <!-- At least three questions. Build each one with
              <details>, with the question inside <summary> and the answer
              in a paragraph after it. Use the word "watering" in at least
              one answer, and wrap it in <mark> every time it appears. -->
         <details>
-          <summary></summary>
+          <summary>How often should I water my plants?</summary>
+          <p>Most vegetables need regular <mark>watering</mark>, especially during hot weather.</p>
         </details>
-
+        <details>
+          <summary>Can beginners join the garden?</summary>
+          <p>Yes! Beginners are welcome, and experienced members are happy to share tips.</p>
+        </details>
+        <details>
+          <summary>What should I bring?</summary>
+          <p>Bring gardening gloves, outdoor clothing, and a reusable water bottle.</p>
+        </details>
 
       <!-- Close the FAQ section. -->
       </section>
-
 
     <!-- Close <main>. -->
     </main>
@@ -276,7 +283,17 @@ Rules:
              opens the visitor's email program
            - a copyright line using the entity for the © symbol
            - a "Back to top" link that jumps to your header's id -->
-    <a href="#top">Back to top</a>
+    <footer>
+        <h2>Address</h2>
+        <address>
+            Garden Name<br>
+            123 Garden Lane<br>
+            North Vancouver, BC V7M 1A1<br>
+            <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+        <p>&copy; 2026 Garden Name</p>
+        <a href="#top">Back to top</a>
+    </footer>
 
   <!-- Close the <body> element. -->
 </body>

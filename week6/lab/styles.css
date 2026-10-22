@@ -18,42 +18,55 @@ Leave these comments in your file when you submit.
 
 /* 1. Universal selector: select every element on the page. */
 * {
-  color: darkgreen;
+
 }
 
 /* 2. Type selector: select every <h2>. */
 h2 {
-  color: brown;
 
 }
 
 /* 3. Class selector: select every element with the class "note". */
+.note {
 
+}
 
 /* 4. Class selector: select the element with the class "important",
       so it looks different from the other notes.
       Hint: if it sets the same property as rule 3, it must come after
       rule 3 to win. Why? */
+.important {
 
+}
 
 /* 5. Id selector: select your FAQ section by its id. */
+#faq {
 
+}
 
 /* 6. Descendant selector: select every <p> inside an <article>. */
+article p {
 
+}
 
 /* 7. Child selector: select only the <ul> that is a direct child of
       your <nav>. */
+nav > ul {
 
+}
 
 /* 8. Adjacent sibling selector: select the paragraph that comes right
       after each <h2>. */
+h2 + p {
 
+}
 
 /* 9. General sibling selector: choose one element on your page, then
       select at least two siblings that come after it in the same
       parent. */
+h2 + p {
 
+}
 
 /* 10. Attribute selector: select only the links that open in a new
        tab, using the value of their target attribute. */
