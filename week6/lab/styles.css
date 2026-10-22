@@ -18,17 +18,17 @@ Leave these comments in your file when you submit.
 
 /* 1. Universal selector: select every element on the page. */
 * {
-
+  color: darkgreen;
 }
 
 /* 2. Type selector: select every <h2>. */
 h2 {
-
+  color: brown;
 }
 
 /* 3. Class selector: select every element with the class "note". */
 .note {
-
+  font-style: italic;
 }
 
 /* 4. Class selector: select the element with the class "important",
@@ -36,59 +36,81 @@ h2 {
       Hint: if it sets the same property as rule 3, it must come after
       rule 3 to win. Why? */
 .important {
-
+  color: red;
 }
 
 /* 5. Id selector: select your FAQ section by its id. */
 #faq {
-
+  background-color: lightyellow;
 }
 
 /* 6. Descendant selector: select every <p> inside an <article>. */
 article p {
-
+  font-style: italic;
 }
 
 /* 7. Child selector: select only the <ul> that is a direct child of
       your <nav>. */
 nav > ul {
-
+  background-color: lightgray;
 }
 
 /* 8. Adjacent sibling selector: select the paragraph that comes right
       after each <h2>. */
 h2 + p {
-
+  font-weight: bold;
 }
 
 /* 9. General sibling selector: choose one element on your page, then
       select at least two siblings that come after it in the same
       parent. */
-h2 + p {
-
+h2 ~ p {
+  text-decoration: underline;
 }
 
 /* 10. Attribute selector: select only the links that open in a new
        tab, using the value of their target attribute. */
-
+a[target="_blank"] {
+  color: purple;
+}
 
 /* 11. Pseudo-classes: write two rules.
        - Links when the mouse is over them.
        - The first item of every list. */
+a:hover {
+  text-decoration: underline;
+}
 
+li:first-child {
+  font-weight: bold;
+}
 
 /* 12. Pseudo-element: add text before or after your <blockquote>.
        Remember this does not work without the content property. */
-
+blockquote::before {
+  content: "Garden member says: ";
+}
 
 /* 13. :is(): one rule that styles <h3> elements inside both an
        <article> and an <aside>. */
-
+:is(article, aside) h3 {
+  color: teal;
+}
 
 /* 14. :where(): write a rule using :where(), then write a plain type
        or class rule that overrides it on the same element.
        Add a comment explaining why the second rule wins. */
+:where(#faq) {
+  color: blue;
+}
 
+#faq {
+  color: darkgreen;
+}
+
+/* #faq wins because an ID selector has higher specificity than :where(). */
 
 /* 15. :has(): select only the <section> that contains a <figure>. */
-
+section:has(figure) {
+  border: 2px solid green;
+}
