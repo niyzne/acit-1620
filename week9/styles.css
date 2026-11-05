@@ -9,7 +9,8 @@ body {
   display: flex; /* flex, inline-flex, block */
   flex-direction: row; /* row, row-reverse, column, column-reverse */
   flex-wrap: nowrap; /* wrap, nowrap, wrap-reverse */
-  justify-content: flex-start; /* flex-end, center, space-evenly, space-between, space-around */
+  /* justify-content: flex-start; /* flex-end, center, space-evenly, space-between, space-around */
+  justify-content: flex-end;
   align-items: stretch; /* flex-start, flex-end, center, baseline */
   align-content: normal;
   gap: 10px;
@@ -17,7 +18,7 @@ body {
   /* the container is taller then the boxes, so you can see align items working */
 
   height: 300px;
-  border: 3px dashes purple;
+  border: 3px dashed purple;
   background: white;
   padding: 10px;
 }
