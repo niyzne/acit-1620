@@ -44,8 +44,12 @@ body {
 
 .three {
   background: red;
-  order: -1;
-  flex-grow: 1;
+  /* order: -1; */
+  /* flex-grow: 1; */
+  /* flex-shrink: 0; */
+  /* flex-basis: 250px; */
+  /* flex: 1; */
+  align-self: flex-end;
 }
 
 
@@ -66,4 +70,24 @@ body {
 /* Box three takes all the leftover space */
 /* .three { */
 /*   flex-grow: 1; */
+/* } */
+
+/* box 3 never shrinks: make the window narrow to see it */
+/* .three { */
+/*   flex-shrink: 0; */
+/* } */
+
+/* box 3 starts at 250px wide (flex basis wins over the width) */
+/* .three { */
+/*   flex-basis: 250px; */
+/* } */
+
+/* shorthand: grow: 1, shrink 1 and basis 0 */
+/* .three { */
+/*   flex: 1; */
+/* } */
+
+/* box 3 alone moves to the bottom */
+/* .three { */
+/*   align-self: flex-end; */
 /* } */
