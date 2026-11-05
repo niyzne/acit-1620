@@ -9,8 +9,7 @@ body {
   display: flex; /* flex, inline-flex, block */
   flex-direction: row; /* row, row-reverse, column, column-reverse */
   flex-wrap: nowrap; /* wrap, nowrap, wrap-reverse */
-  /* justify-content: flex-start; /* flex-end, center, space-evenly, space-between, space-around */
-  justify-content: flex-end;
+  justify-content: flex-start; /* flex-end, center, space-evenly, space-between, space-around */
   align-items: stretch; /* flex-start, flex-end, center, baseline */
   align-content: normal;
   gap: 10px;
@@ -46,6 +45,7 @@ body {
 .three {
   background: red;
   order: -1;
+  flex-grow: 1;
 }
 
 
@@ -61,4 +61,9 @@ body {
 /* moves box 3 to the front */
 /* .three { */
 /*   order: -1; */
+/* } */
+
+/* Box three takes all the leftover space */
+/* .three { */
+/*   flex-grow: 1; */
 /* } */
