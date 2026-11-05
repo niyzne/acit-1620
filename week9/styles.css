@@ -45,6 +45,7 @@ body {
 
 .three {
   background: red;
+  order: -1;
 }
 
 
@@ -56,3 +57,8 @@ body {
 .five {
   background: red;
 }
+
+/* moves box 3 to the front */
+/* .three { */
+/*   order: -1; */
+/* } */
