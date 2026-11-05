@@ -4,8 +4,8 @@ body {
 }
 
 .area {
-  background: white;
-  border: 2px dashes orange;
+  background: yellow;
+  border: 2px dashed orange;
   display: flow-root; /* keeps the boxes margin inside the orange area */
 }
 
@@ -14,9 +14,31 @@ body {
   height: 80px;
   padding: 20px;
   border: 5px solid grey;
-  margin: 20;
+  margin: 20px;
   box-sizing: content-box;
   background: lightblue;
   font-size: 20px;
   font-weight: bold;
 }
+
+.two {
+  background: green;
+  margin: 20px auto;
+}
+
+.one {
+  /* border-top: 12px solid red; */
+  /* padding-left: 80px; */
+  height: 5px;
+  padding: 0 20px;
+}
+
+/* A border on one side only */
+/* .one { */
+/*   padding-left: 80px; */
+/* } */
+
+/* padding on one side only. The text moves away from the left edge */
+/* .two { */
+/*   margin: 20px auto; */
+/* } */
