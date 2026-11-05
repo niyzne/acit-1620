@@ -32,11 +32,20 @@ body {
   font-weight: bold;
   line-height: 80px;
   text-align: center;
-  border-radius: 6;
+  border-radius: 6px;
+}
+
+.one {
+  background: red;
 }
 
 .two {
-  background: red;
+  background: green;
+ /* position: static; */
+  position: relative;
+  top: 30px;
+  left: 40px;
+  z-index: auto;
 }
 
 .three {
