@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!-- STEP 1: First read the LAB OVERVIEW comment a few lines below,
+     then come back here. Add a lang attribute to the html element on the
+     next line to say the page is in English (lang="en"). Screen readers use
+     it to choose the right pronunciation. -->
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--
+  ==========================================================================
+  LAB OVERVIEW
+  ACIT 1620 · Week 10 Lab: Accessible Layouts
+  Flexbox and the box model (Week 9)
+  Accessible HTML and design (Week 10)
+  ==========================================================================
+
+  SCENARIO
+  The Northshore Bike Co-op is a volunteer-run community bike shop. A
+  volunteer started building its home page but ran out of time. The page
+  is only partly styled, and although it looks fine at first glance, many
+  people can't use it: some controls can't be reached with a keyboard, a
+  screen reader can't make sense of its structure or its images, and the
+  form can only be completed with a mouse. The layout isn't finished
+  either. Your job is to fix the HTML and finish the layout.
+
+  HOW THE LAB WORKS
+  Every instruction is in a comment next to the code you change: above it
+  in index.html, and above or inside the rule in style.css.
+  The steps are numbered in the order they appear in each file, so just
+  work from the top of the file to the bottom:
+    1. index.html   STEP 1 to STEP 21   accessible HTML
+    2. style.css    TODO 1 to TODO 11   Flexbox and the box model
+    3. index.html   STEP 22 to STEP 24  test and reflect
+                                        (at the end of this file)
+
+  BEFORE YOU START
+  1. Rename this folder to Week10_Lab_FirstnameLastname (your own name).
+  2. Check that it contains index.html, style.css and an images folder
+     with six images.
+  3. Open the folder in your code editor and open index.html in your
+     browser. Keep both open side by side.
+  4. After every change, save the file and refresh the browser so you can
+     see what changed.
+  5. Don't rename any class names. The CSS depends on them.
+  6. Create an answers document (Word or PDF) named
+     Week10_Lab_Answers_FirstnameLastname, with your name and student
+     number at the top. Your screenshots and answers for STEP 22 to
+     STEP 24 go in it.
+
+  Now go back up to STEP 1.
+  ==========================================================================
+  -->
+
+  <!-- STEP 2: Allow zoom. In the content attribute below, remove
+       maximum-scale=1 and user-scalable=no, which stop people from zooming
+       on a phone. Leave: width=device-width, initial-scale=1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- STEP 3: The title is just "Home". Change it so it says
+       which page this is AND which site it belongs to, with the specific
+       part first. Format: Page name | Site name -->
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- STEP 4: Add a skip link on the empty line below this comment,
+       as the very first element inside body. It lets keyboard users jump
+       past the header to the main content. 
+       The CSS for it is already in style.css: it stays hidden until a
+       keyboard user presses Tab, then appears at the top left. -->
+
+  <!-- STEP 5: Change this div to a header element, keeping
+       class="site-header". Change its closing </div> to </header> too
+       (it's just above the yellow notice). -->
+  <div class="site-header">
+    <a href="index.html" class="logo-link">
+      <!-- STEP 6: This image has no alt attribute. It is the only
+           content of a link, so it is a functional image: its alt text
+           should say where the link goes (the co-op's home page), not
+           describe the picture. Add an alt attribute. -->
+      <img src="images/logo.png" class="logo">
+    </a>
+    <!-- STEP 7: Change this div to a nav element, keeping
+         class="menu". Change its closing </div> to </nav> too. -->
+    <div class="menu">
+      <a href="#workshops">Workshops</a>
+      <a href="#rides">Rides</a>
+      <a href="#hours">Hours</a>
+      <a href="#join">Join</a>
+    </div>
+  </div>
+
+  <div class="banner">
+    <p>Winter hours start December 1.</p>
+    <!-- STEP 8: This x is a span, so it can't be reached with the
+         keyboard. Replace the whole line below with this button.
+         aria-label gives it a name, because it only shows the x symbol:
+         <button type="button" class="close" aria-label="Close notice" onclick="this.parentElement.remove()">×</button> -->
+    <span class="close" onclick="this.parentElement.remove()">×</span>
+  </div>
+
+  <!-- STEP 9: Change this div to a main element, keeping
+       class="content", and add id="main" (the target of your skip link).
+       Change its closing </div> to </main> too (just above the footer). -->
+  <div class="content">
+    <h1>Northshore Bike Co-op</h1>
+    <!-- STEP 10: "click here" doesn't make sense on its own when a
+         screen reader lists the links on a page. Reword the end of this
+         sentence so the link text itself describes the destination. -->
+    <p class="intro">We are a volunteer-run community bike shop. Bring your bike, borrow our tools, and learn to fix it yourself with help from our mechanics. To read our story and values, <a href="about.html">click here</a>.</p>
+    <!-- STEP 11: This wavy line gives no information, so it is a
+         decorative image. Add an empty alt attribute. -->
+    <img src="images/divider.png" class="divider">
+
+    <!-- STEP 12: The page jumps from h1 straight to h3. Change this
+         heading to h2 (both tags), and keep id="workshops": the menu link
+         points to it. -->
+    <h3 id="workshops">Workshops</h3>
+    <!-- STEP 13: The three workshop cards below. For EACH card:
+         a) Change <div class="card"> to <article class="card">, and its
+            closing </div> to </article>. Each card is a self-contained
+            item.
+         b) Fix the image's alt. The heading below each image already names
+            the workshop, so these icons are decorative: use alt="".
+            (One alt repeats the file name, one starts with "Image of",
+            and one is missing.)
+         c) Replace the bold paragraph, for example
+            <p class="card-title"><b>Fix a flat</b></p>, with an h3 that
+            contains only the title: <h3>Fix a flat</h3>
+         d) Change "Read more" so the link says which workshop it is about,
+            for example "Fix a flat workshop details". The three links must
+            be different from each other. -->
+    <div class="cards">
+      <div class="card">
+        <span class="badge">New</span>
+        <img src="images/flat-tire.png" alt="flat-tire.png">
+        <p class="card-title"><b>Fix a flat</b></p>
+        <p>Learn to remove a wheel, find the hole and patch a tube in under 30 minutes.</p>
+        <a href="flat.html">Read more</a>
+      </div>
+      <div class="card">
+        <img src="images/brakes.png" alt="Image of brakes">
+        <p class="card-title"><b>Brake tune-up</b></p>
+        <p>Adjust rim and disc brakes so your bike stops safely in any weather.</p>
+        <a href="brakes.html">Read more</a>
+      </div>
+      <div class="card">
+        <img src="images/winter.png">
+        <p class="card-title"><b>Winter riding</b></p>
+        <p>Choose lights, fenders and tires that keep you riding through the rainy season.</p>
+        <a href="winter.html">Read more</a>
+      </div>
+    </div>
+
+    <!-- STEP 14: Change this heading to h2, keeping its id. -->
+    <h3 id="rides">Group rides</h3>
+    <p>Every Sunday at 10:00 we ride an easy loop along the waterfront. All ages and speeds are welcome.</p>
+    <!-- STEP 15: This map is an informative image, but its alt
+         just says "map". Open images/ride-map.png and look at it, then
+         write alt text that gives a screen reader user the same
+         information: the route, where it starts and how long it is. -->
+    <img src="images/ride-map.png" alt="map" class="map">
+
+    <!-- STEP 16: Change this heading to h2, keeping its id. -->
+    <h3 id="hours">Opening hours</h3>
+    <!-- STEP 17: Make this a proper data table.
+         a) Add <caption>Shop opening hours</caption> as the first line
+            inside the table.
+         b) In the first row, change the three td cells (Day, Opens,
+            Closes) to <th scope="col"> cells, because each one is the
+            header for its column.
+         c) In each of the other rows, change the first cell (the day) to a
+            <th scope="row"> cell, because it is the header for its row.
+            -->
+    <table class="hours">
+      <tr>
+        <td>Day</td>
+        <td>Opens</td>
+        <td>Closes</td>
+      </tr>
+      <tr>
+        <td>Monday to Friday</td>
+        <td>12:00</td>
+        <td>20:00</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>10:00</td>
+        <td>18:00</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>10:00</td>
+        <td>16:00</td>
+      </tr>
+    </table>
+
+    <!-- STEP 18: Change this heading to h2, keeping its id. -->
+    <h3 id="join">Join the co-op</h3>
+    <!-- STEP 19: The form below has no labels, uses placeholders
+         instead, only shows the email error as a red border, and its Join
+         now "button" is a div that can't be used with a keyboard. Delete
+         the whole form, from <form ...> to </form>, and paste this code in
+         its place:
+
+    <form class="join-form" action="#">
+      <label for="full-name">Full name</label>
+      <input type="text" id="full-name" name="full-name" autocomplete="name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" autocomplete="email" value="sam@" class="invalid" aria-describedby="email-error">
+      <p id="email-error" class="error-message">Error: enter a full email address, like name@example.com.</p>
+
+      <fieldset>
+        <legend>Membership type</legend>
+        <div class="option">
+          <input type="radio" id="type-regular" name="type" value="regular">
+          <label for="type-regular">Regular ($20 per year)</label>
+        </div>
+        <div class="option">
+          <input type="radio" id="type-student" name="type" value="student">
+          <label for="type-student">Student ($10 per year)</label>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn">Join now</button>
+    </form>
+
+         What the new code does:
+         - Each label's for attribute matches its field's id, so clicking
+           the label focuses the field, and a screen reader reads the label
+           when the field receives focus. A placeholder is not a label.
+         - type="email" tells the browser the field holds an email address,
+           and autocomplete lets the browser fill the fields in.
+         - The error paragraph says what's wrong and how to fix it, and
+           aria-describedby connects it to the email field, so the error
+           no longer relies on the red colour alone.
+         - The fieldset groups the radio buttons, and the legend gives the
+           group its question, which a screen reader reads with each option.
+         - A real button can be reached with Tab, works with Enter and
+           Space, and submits the form.
+         Test it: refresh, press Tab until you reach the form, and check you
+         can reach both fields, the radio group (choose with the arrow keys)
+         and Join now. Click the words "Full name": the cursor should move
+         into the field. -->
+    <form class="join-form" action="#">
+      <input type="text" name="full-name" placeholder="Full name">
+      <input type="text" name="email" placeholder="Email" value="sam@" class="invalid">
+
+      <p>Membership type</p>
+      <div class="option">
+        <input type="radio" name="type" value="regular"> Regular ($20 per year)
+      </div>
+      <div class="option">
+        <input type="radio" name="type" value="student"> Student ($10 per year)
+      </div>
+
+      <div class="btn" onclick="this.closest('form').submit()">Join now</div>
+    </form>
+  </div>
+
+  <!-- STEP 20: Change this div to a footer element, keeping
+       class="site-footer". Change its closing </div> to </footer> too. -->
+  <div class="site-footer">
+    <p>Northshore Bike Co-op · 123 Harbour Street</p>
+    <!-- STEP 21: This link opens a PDF file. Replace the sentence
+         so the link text names the file and says it's a PDF.
+         Then run index.html through the HTML validator we use in this
+         course and fix any errors. Next, open style.css and start TODO 1. -->
+    <p>For a printable workshop schedule, <a href="schedule.pdf">click here</a>.</p>
+  </div>
+
+  <!--
+  ==========================================================================
+  TEST AND REFLECT: do STEP 22 to STEP 24 after you've finished style.css.
+
+  STEP 22: Validator
+  Run your finished index.html through the HTML validator.
+  SCREENSHOT 22: the validator result showing no errors.
+
+  STEP 23: Screenshots. Put these in your answers document, each
+  with its label.
+    23-a  The focus outline on one of the menu links, reached with Tab.
+    23-b  The skip link visible at the top of the page after pressing Tab
+          once.
+    23-c  The page in your browser's responsive or device mode at 320
+          pixels wide, showing the content in one column with no sideways
+          scrolling.
+    23-d  The accessibility panel of the developer tools with the Join now
+          button selected, showing its role and name.
+    23-e  A developer tools view showing a contrast ratio of at least 4.5:1
+          for the .intro text.
+
+  STEP 24: Questions. Answer each in two to four sentences, in
+  your own words, in your answers document.
+    1. The skip link is hidden until it receives keyboard focus. Who is it
+       for, and why is it hidden this way rather than removed with
+       display: none?
+    2. Why did the three workshop card images get alt="", while the ride
+       map needed a full description?
+    3. Name two problems you fixed in this lab that the validator did not
+       report. Explain why an automated tool can't detect them.
+
+  BEFORE YOU SUBMIT: CHECKLIST
+  - The validator reports no errors for your index.html.
+  - You can reach and use every link, button and form field with the
+    keyboard alone, and you can always see where the focus is.
+  - Every image has an alt attribute that matches its purpose.
+  - The headings go from h1 to h2 to h3 without skipping a level.
+  - The page works at 200% zoom and at 320 pixels wide without sideways
+    scrolling.
+  - Your answers document contains every screenshot and answer, labelled.
+
+  SUBMISSION
+  Put your answers document inside your Week10_Lab_FirstnameLastname
+  folder, together with your finished index.html, style.css and the images
+  folder. Compress the folder into a single .zip file and upload it to
+  Learning Hub by the due date shown there.
+  ==========================================================================
+  -->
+</body>
+</html>
